@@ -1,0 +1,58 @@
+[
+ {
+  "severity": "CRITICAL",
+  "rule": "instance-credentials-used-from-unknown-ip",
+  "time": "2026-10-10T02:10:05Z",
+  "principal": "arn:aws:sts::111122223333:assumed-role/lab-instance-role/i-0abc1234def567890",
+  "detail": "268 API calls from 198.51.100.77 (not the instance's EIP) between 2026-10-10T02:10:05Z and 2026-10-10T02:28:57Z - matches stolen-IMDS-credential pattern",
+  "mitre": "T1552.005 Cloud Instance Metadata API"
+ },
+ {
+  "severity": "MEDIUM",
+  "rule": "access-denied-burst",
+  "time": "2026-10-10T02:11:00Z",
+  "principal": "arn:aws:sts::111122223333:assumed-role/lab-instance-role/i-0abc1234def567890",
+  "detail": "7 denied calls within 15 min (threshold 5) - enumeration / probing",
+  "mitre": "T1087.004 Account Discovery: Cloud"
+ },
+ {
+  "severity": "HIGH",
+  "rule": "s3-bulk-read",
+  "time": "2026-10-10T02:14:00Z",
+  "principal": "arn:aws:sts::111122223333:assumed-role/lab-instance-role/i-0abc1234def567890",
+  "detail": "181 GetObject calls within 10 min (threshold 50)",
+  "mitre": "T1530 Data from Cloud Storage"
+ },
+ {
+  "severity": "HIGH",
+  "rule": "console-login-without-mfa",
+  "time": "2026-10-10T02:41:00Z",
+  "principal": "arn:aws:iam::111122223333:user/lab-analyst",
+  "detail": "from 198.51.100.77",
+  "mitre": "T1078.004"
+ },
+ {
+  "severity": "CRITICAL",
+  "rule": "root-account-usage",
+  "time": "2026-10-10T02:43:00Z",
+  "principal": "arn:aws:iam::111122223333:root",
+  "detail": "ConsoleLogin from 198.51.100.77",
+  "mitre": "T1078.004 Valid Accounts: Cloud"
+ },
+ {
+  "severity": "CRITICAL",
+  "rule": "iam-policy-change",
+  "time": "2026-10-10T02:50:00Z",
+  "principal": "arn:aws:iam::111122223333:user/lab-analyst",
+  "detail": "AttachRolePolicy arn:aws:iam::aws:policy/AdministratorAccess",
+  "mitre": "T1098 Account Manipulation"
+ },
+ {
+  "severity": "CRITICAL",
+  "rule": "cloudtrail-tampering",
+  "time": "2026-10-10T02:55:00Z",
+  "principal": "arn:aws:iam::111122223333:user/lab-analyst",
+  "detail": "StopLogging on lab-management-trail",
+  "mitre": "T1562.008 Disable Cloud Logs"
+ }
+]

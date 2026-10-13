@@ -1,0 +1,356 @@
+terraform scan results:
+
+Passed checks: 90, Failed checks: 27, Skipped checks: 0
+
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_356: "Ensure no IAM policies documents allow "*" as a statement's resource for restrictable actions"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management / resource exposure without constraints"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_358: "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_49: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_283: "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_1: "Ensure IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management / resource exposure without constraints"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_358: "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_49: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_283: "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_1: "Ensure IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_286: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_290: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_288: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_62: "Ensure IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_289: "Ensure IAM policies does not allow permissions management / resource exposure without constraints"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_287: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_63: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_355: "Ensure no IAM policies documents allow "*" as a statement's resource for restrictable actions"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_61: "Ensure AWS IAM policy does not allow assume role permission across all services"
+	PASSED for resource: aws_iam_role.lab_readonly
+	File: /iam.tf:64-67
+Check: CKV_AWS_60: "Ensure IAM role allows only specific services or principals to assume it"
+	PASSED for resource: aws_iam_role.lab_readonly
+	File: /iam.tf:64-67
+Check: CKV_AWS_274: "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy"
+	PASSED for resource: aws_iam_role.lab_readonly
+	File: /iam.tf:64-67
+Check: CKV_AWS_393: "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role"
+	PASSED for resource: aws_iam_role.lab_readonly
+	File: /iam.tf:64-67
+Check: CKV_AWS_62: "Ensure IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: aws_iam_role_policy.lab_readonly_policy
+	File: /iam.tf:85-89
+Check: CKV_AWS_63: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: aws_iam_role_policy.lab_readonly_policy
+	File: /iam.tf:85-89
+Check: CKV_AWS_41: "Ensure no hard coded AWS access key and secret key exists in provider"
+	PASSED for resource: aws.default
+	File: /main.tf:11-13
+Check: CKV_AWS_110: "Ensure IAM policies does not allow privilege escalation"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_111: "Ensure IAM policies does not allow write access without constraints"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_356: "Ensure no IAM policies documents allow "*" as a statement's resource for restrictable actions"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_108: "Ensure IAM policies does not allow data exfiltration"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_109: "Ensure IAM policies does not allow permissions management / resource exposure without constraints"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_358: "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_49: "Ensure no IAM policies documents allow "*" as a statement's actions"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_107: "Ensure IAM policies does not allow credentials exposure"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_283: "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_1: "Ensure IAM policies that allow full "*-*" administrative privileges are not created"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_53: "Ensure S3 bucket has block public ACLS enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.trail_bucket_block
+	File: /monitoring.tf:9-15
+Check: CKV_AWS_54: "Ensure S3 bucket has block public policy enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.trail_bucket_block
+	File: /monitoring.tf:9-15
+Check: CKV_AWS_56: "Ensure S3 bucket has 'restrict_public_buckets' enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.trail_bucket_block
+	File: /monitoring.tf:9-15
+Check: CKV_AWS_55: "Ensure S3 bucket has ignore public ACLs enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.trail_bucket_block
+	File: /monitoring.tf:9-15
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket_policy.trail_bucket_policy
+	File: /monitoring.tf:46-49
+Check: CKV_AWS_36: "Ensure CloudTrail log file validation is enabled"
+	PASSED for resource: aws_cloudtrail.lab_trail
+	File: /monitoring.tf:51-57
+Check: CKV_AWS_67: "Ensure CloudTrail is enabled in all Regions"
+	PASSED for resource: aws_cloudtrail.lab_trail
+	File: /monitoring.tf:51-57
+Check: CKV_AWS_251: "Ensure CloudTrail logging is enabled"
+	PASSED for resource: aws_cloudtrail.lab_trail
+	File: /monitoring.tf:51-57
+Check: CKV_AWS_319: "Ensure that CloudWatch alarm actions are enabled"
+	PASSED for resource: aws_cloudwatch_metric_alarm.billing_alarm
+	File: /monitoring.tf:73-86
+Check: CKV_AWS_319: "Ensure that CloudWatch alarm actions are enabled"
+	PASSED for resource: aws_cloudwatch_metric_alarm.cpu_alarm
+	File: /monitoring.tf:88-98
+Check: CKV_AWS_130: "Ensure VPC subnets do not assign public IP by default"
+	PASSED for resource: aws_subnet.private_subnet
+	File: /network.tf:27-35
+Check: CKV_AWS_24: "Ensure no security groups allow ingress from 0.0.0.0:0 to port 22"
+	PASSED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV_AWS_277: "Ensure no security groups allow ingress from 0.0.0.0:0 to port -1"
+	PASSED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV_AWS_23: "Ensure every security group and rule has a description"
+	PASSED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV_AWS_25: "Ensure no security groups allow ingress from 0.0.0.0:0 to port 3389"
+	PASSED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV_AWS_230: "Ensure no NACL allow ingress from 0.0.0.0:0 to port 20"
+	PASSED for resource: aws_network_acl.public_nacl
+	File: /network.tf:108-142
+Check: CKV_AWS_232: "Ensure no NACL allow ingress from 0.0.0.0:0 to port 22"
+	PASSED for resource: aws_network_acl.public_nacl
+	File: /network.tf:108-142
+Check: CKV_AWS_231: "Ensure no NACL allow ingress from 0.0.0.0:0 to port 3389"
+	PASSED for resource: aws_network_acl.public_nacl
+	File: /network.tf:108-142
+Check: CKV_AWS_229: "Ensure no NACL allow ingress from 0.0.0.0:0 to port 21"
+	PASSED for resource: aws_network_acl.public_nacl
+	File: /network.tf:108-142
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV_AWS_53: "Ensure S3 bucket has block public ACLS enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.lab_bucket_block
+	File: /storage.tf:31-38
+Check: CKV_AWS_54: "Ensure S3 bucket has block public policy enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.lab_bucket_block
+	File: /storage.tf:31-38
+Check: CKV_AWS_56: "Ensure S3 bucket has 'restrict_public_buckets' enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.lab_bucket_block
+	File: /storage.tf:31-38
+Check: CKV_AWS_55: "Ensure S3 bucket has ignore public ACLs enabled"
+	PASSED for resource: aws_s3_bucket_public_access_block.lab_bucket_block
+	File: /storage.tf:31-38
+Check: CKV_AWS_93: "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)"
+	PASSED for resource: aws_s3_bucket_policy.deny_insecure_transport
+	File: /storage.tf:40-61
+Check: CKV2_AWS_22: "Ensure an IAM User does not have access to the console"
+	PASSED for resource: aws_iam_user.lab_admin
+	File: /iam.tf:5-11
+Check: CKV2_AWS_22: "Ensure an IAM User does not have access to the console"
+	PASSED for resource: aws_iam_user.lab_analyst
+	File: /iam.tf:49-51
+Check: CKV2_AWS_35: "AWS NAT Gateways should be utilized for the default route"
+	PASSED for resource: aws_route_table.public_rt
+	File: /network.tf:45-56
+Check: CKV2_AWS_44: "Ensure AWS route table with VPC peering does not contain routes overly permissive to all traffic"
+	PASSED for resource: aws_route_table.public_rt
+	File: /network.tf:45-56
+Check: CKV2_AWS_1: "Ensure that all NACL are attached to subnets"
+	PASSED for resource: aws_network_acl.public_nacl
+	File: /network.tf:108-142
+Check: CKV2_AWS_40: "Ensure AWS IAM policy does not allow full IAM privileges"
+	PASSED for resource: aws_iam_policy_document.lab_analyst_assume
+	File: /iam.tf:53-62
+Check: CKV2_AWS_40: "Ensure AWS IAM policy does not allow full IAM privileges"
+	PASSED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV2_AWS_40: "Ensure AWS IAM policy does not allow full IAM privileges"
+	PASSED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV2_AWS_40: "Ensure AWS IAM policy does not allow full IAM privileges"
+	PASSED for resource: aws_iam_policy_document.trail_bucket_policy
+	File: /monitoring.tf:17-44
+Check: CKV2_AWS_56: "Ensure AWS Managed IAMFullAccess IAM policy is not used."
+	PASSED for resource: aws_iam_user_policy_attachment.lab_admin_access
+	File: /iam.tf:13-16
+Check: CKV2_AWS_56: "Ensure AWS Managed IAMFullAccess IAM policy is not used."
+	PASSED for resource: aws_iam_role.lab_readonly
+	File: /iam.tf:64-67
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_57: "S3 Bucket has an ACL defined which allows public WRITE access."
+	PASSED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	PASSED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_20: "S3 Bucket has an ACL defined which allows public READ access."
+	PASSED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	PASSED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV2_AWS_6: "Ensure that S3 bucket has a Public Access block"
+	PASSED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	PASSED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	PASSED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_19: "Ensure all data stored in the S3 bucket is securely encrypted at rest"
+	PASSED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV_AWS_356: "Ensure no IAM policies documents allow "*" as a statement's resource for restrictable actions"
+	FAILED for resource: aws_iam_policy_document.lab_readonly_permissions
+	File: /iam.tf:69-83
+Check: CKV_AWS_273: "Ensure access is controlled through SSO and not AWS IAM defined users"
+	FAILED for resource: aws_iam_user.lab_admin
+	File: /iam.tf:5-11
+Check: CKV_AWS_40: "Ensure IAM policies are attached only to groups or roles (Reducing access management complexity may in-turn reduce opportunity for a principal to inadvertently receive or retain excessive privileges.)"
+	FAILED for resource: aws_iam_user_policy_attachment.lab_admin_access
+	File: /iam.tf:13-16
+Check: CKV_AWS_274: "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy"
+	FAILED for resource: aws_iam_user_policy_attachment.lab_admin_access
+	File: /iam.tf:13-16
+Check: CKV_AWS_40: "Ensure IAM policies are attached only to groups or roles (Reducing access management complexity may in-turn reduce opportunity for a principal to inadvertently receive or retain excessive privileges.)"
+	FAILED for resource: aws_iam_user_policy.force_mfa
+	File: /iam.tf:19-43
+Check: CKV_AWS_273: "Ensure access is controlled through SSO and not AWS IAM defined users"
+	FAILED for resource: aws_iam_user.lab_analyst
+	File: /iam.tf:49-51
+Check: CKV_AWS_252: "Ensure CloudTrail defines an SNS Topic"
+	FAILED for resource: aws_cloudtrail.lab_trail
+	File: /monitoring.tf:51-57
+Check: CKV_AWS_35: "Ensure CloudTrail logs are encrypted at rest using KMS CMKs"
+	FAILED for resource: aws_cloudtrail.lab_trail
+	File: /monitoring.tf:51-57
+Check: CKV_AWS_26: "Ensure all data stored in the SNS topic is encrypted"
+	FAILED for resource: aws_sns_topic.lab_alerts
+	File: /monitoring.tf:63-65
+Check: CKV_AWS_130: "Ensure VPC subnets do not assign public IP by default"
+	FAILED for resource: aws_subnet.public_subnet
+	File: /network.tf:16-25
+Check: CKV_AWS_260: "Ensure no security groups allow ingress from 0.0.0.0:0 to port 80"
+	FAILED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV_AWS_382: "Ensure no security groups allow egress from 0.0.0.0:0 to port -1"
+	FAILED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
+	FAILED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV2_AWS_62: "Ensure S3 buckets should have event notifications enabled"
+	FAILED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV2_AWS_11: "Ensure VPC flow logging is enabled in all VPCs"
+	FAILED for resource: aws_vpc.lab_vpc
+	File: /network.tf:6-14
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_18: "Ensure the S3 bucket has access logging enabled"
+	FAILED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV2_AWS_5: "Ensure that Security Groups are attached to another resource"
+	FAILED for resource: aws_security_group.lab_sg
+	File: /network.tf:70-102
+Check: CKV2_AWS_12: "Ensure the default security group of every VPC restricts all traffic"
+	FAILED for resource: aws_vpc.lab_vpc
+	File: /network.tf:6-14
+Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
+	FAILED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV2_AWS_61: "Ensure that an S3 bucket has a lifecycle configuration"
+	FAILED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV2_AWS_10: "Ensure CloudTrail trails are integrated with CloudWatch Logs"
+	FAILED for resource: aws_cloudtrail.lab_trail
+	File: /monitoring.tf:51-57
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_144: "Ensure that S3 bucket has cross-region replication enabled"
+	FAILED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+Check: CKV_AWS_21: "Ensure all data stored in the S3 bucket have versioning enabled"
+	FAILED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.trail_bucket
+	File: /monitoring.tf:5-7
+Check: CKV_AWS_145: "Ensure that S3 buckets are encrypted with KMS by default"
+	FAILED for resource: aws_s3_bucket.lab_bucket
+	File: /storage.tf:5-11
+

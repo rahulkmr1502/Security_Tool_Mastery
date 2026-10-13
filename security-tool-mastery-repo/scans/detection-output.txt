@@ -1,0 +1,8 @@
+events analysed: 412   findings: 7   {'CRITICAL': 4, 'MEDIUM': 1, 'HIGH': 2}
+[CRITICAL] 2026-10-10T02:10:05Z  instance-credentials-used-from-unknown-ip  268 API calls from 198.51.100.77 (not the instance's EIP) between 2026-10-10T02:10:05Z and 2026-10-10T02:28:57Z - matches stolen-IMDS-credential pattern
+[MEDIUM  ] 2026-10-10T02:11:00Z  access-denied-burst                        7 denied calls within 15 min (threshold 5) - enumeration / probing
+[HIGH    ] 2026-10-10T02:14:00Z  s3-bulk-read                               181 GetObject calls within 10 min (threshold 50)
+[HIGH    ] 2026-10-10T02:41:00Z  console-login-without-mfa                  from 198.51.100.77
+[CRITICAL] 2026-10-10T02:43:00Z  root-account-usage                         ConsoleLogin from 198.51.100.77
+[CRITICAL] 2026-10-10T02:50:00Z  iam-policy-change                          AttachRolePolicy arn:aws:iam::aws:policy/AdministratorAccess
+[CRITICAL] 2026-10-10T02:55:00Z  cloudtrail-tampering                       StopLogging on lab-management-trail
